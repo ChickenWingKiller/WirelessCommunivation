@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="jpg">
+    <file>images/logo.png</file>
+    <file>images/电量.png</file>
+    <file>images/叹号.png</file>
+  </qresource>
+</RCC>
