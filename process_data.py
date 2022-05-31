@@ -20,6 +20,8 @@ class DataProcessor():
                 if self.start_point_count == 3:
                     self.start_flag = True
                     self.start_point_count = 0
+                elif self.start_point_count > 3:
+                    return
                 else:
                     self.start_point_count += 1
                     # self.last_byte = num
@@ -33,7 +35,7 @@ class DataProcessor():
                 # if self.end_point_count == 0:
                 #     self.end_point_count += 1
                 #     self.last_byte = num
-                if self.end_point_count == 3 and self.start_flag:
+                if self.end_point_count == 3:
                     self.end_flag = True
                     self.end_point_count = 0
                 else:
@@ -58,14 +60,14 @@ class DataProcessor():
             self.package_count += 1
             print('----------------------------')
             print('第%d个数据包接收完成' % self.package_count)
-            return self.data_buffer
+            print('数据包为：')
+            print(self.return_data_package())
+            self.data_buffer = []
+            self.start_flag = False
+            self.end_flag = False
         self.last_byte = num
 
-
-if __name__ == '__main__':
-    data_processor = DataProcessor()
-    type_in = 0
-    byte = b''
-    while True:
-        type_in = int(input())
-        byte = b
+    def return_data_package(self):
+        self.data_buffer = [90, 90, 90] + self.data_buffer
+        self.data_buffer.append(126)
+        return self.data_buffer

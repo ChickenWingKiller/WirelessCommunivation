@@ -27,27 +27,6 @@ class mainui(mainWindow.Ui_MainWindow):
         box4_ui.setupUi(MainWindow)
 
     def open5(self):
-        # for i in range(len(self.box5StatusList)):
-        #     temp = self.box5StatusList[i]
-        #     if temp:
-        #         if i == 0:
-        #             box5_ui.label_5.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 1:
-        #             box5_ui.label_6.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 2:
-        #             box5_ui.label_7.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 3:
-        #             box5_ui.label_8.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 4:
-        #             box5_ui.label_9.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 5:
-        #             box5_ui.label_10.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 6:
-        #             box5_ui.label_11.setStyleSheet("color: rgb(255, 255, 255);")
-        #         elif i == 7:
-        #             box5_ui.label_12.setStyleSheet("color: rgb(255, 255, 255);")
-        #         else:
-        #             box5_ui.label_13.setStyleSheet("color: rgb(255, 255, 255);")
         self.timeTimer.stop()
         self.dataTimer.stop()
         box5_ui.setupUi(MainWindow)
